@@ -1,0 +1,75 @@
+.footer{
+    background-color: $color_blue;
+    @include width-height(100%,350px);
+    &__nav{
+        @include width-height(100%,290px);
+        padding: 58px 124px 28px;
+        display:flex;
+        justify-content: space-between;
+    }
+    &__title{
+        @include fontStyle(500,18px,18px,$color_white); 
+        border-bottom: 2px solid $color_white; 
+        margin: 0 0 40px;
+        display: inline-block;
+    }
+    &__link{
+        text-decoration: none;
+        display: block;
+        @include fontStyle(400,14px,14px,$color_white); 
+        margin: 0 0 18px;
+        transition: text-decoration 0.5s ease;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__email{
+        @include width-height(400px,120px);
+        &_lable{
+            @include fontStyle(400,18px,26px,$color_white); 
+            @include width-height(364px,52px); 
+            display: block;
+        }
+        &_input{
+            @include width-height(268px,50px); 
+            padding: 18px 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 20px 10px 0 0;
+        }
+    }
+    &__btn{
+        @include fontStyle(700,16px,16px,$color_blue); 
+        @include width-height(116px,51px);
+        background-color: $color_white;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+        &:hover{
+            opacity: 0.6;
+        }  
+    }
+    &__bottom{
+        @include width-height(100%,60px);
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $color_white;
+        padding: 23px 123px;
+        @include fontStyle(700,11px,11px,$color_white);
+    }
+    &__icon{
+        margin: 0 25px 0 0;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.5s ease;
+        &:hover{
+            transform: scale(1.4);
+            transform: scale(1.4);
+            transform: scale(1.4);
+        }
+    }  
+
+}

@@ -1,0 +1,97 @@
+.about{
+    @include width-height(100%,1475px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 245px;
+    background-image: url("../img/img05.png"),
+    url("../img/img06.png"),
+    url("../img/img06.png"),
+    url("../img/img06.png"),
+    url("../img/img07.png");
+    background-repeat: no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+    background-position: right 0 top 0,
+    right 168px top 85px,
+    left 225px bottom 647px,
+    right 150px bottom 78px,
+    left 0 bottom 0;
+    background-size: auto auto,
+    auto auto,
+    auto auto,
+    auto auto,
+    auto auto;
+    &__title{
+        @include fontStyle(600,36px,46px,$color_text);
+        margin: 0 70px 0 0;
+        max-width: 360px;
+    }
+    &__container-1{
+        min-width: 500px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 105px 0 0;
+    }
+    &__container-2{
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item-1{
+        align-self: center;
+        margin: 170px 0 0 45px;
+    }
+    &__item-1 img,
+    &__item-3 img{
+        display: block;
+        margin:0 auto 56px;
+    }
+    
+    &__item-2{
+        position: relative;
+        margin: 0 0 113px;
+        & img{
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top:-70px;
+        }
+    }
+}
+.item-about{
+   max-width: 380px;
+   min-height: 525px;
+    padding:48px;
+    box-shadow: 5px 20px 50px 0px rgba(74, 153, 211, 0.2);
+    background-color: $color_white;
+    &__title{
+        @include fontStyle(600,20px,30px,$color_black-bold);
+        margin:0 0 16px;  
+    }
+    &__text{
+        @include fontStyle(400,16px,26px,$color_text);
+        opacity: 50%;
+        margin: 0 0 62px; 
+    }
+    &__link{
+        @include fontStyle(600,14px,30px,$color_blue);
+        text-decoration: none;
+        margin: 0 19px 0 0 ;
+        & svg{
+            margin:0 0 0 19px; 
+            position: relative;
+            bottom: -4px; 
+            animation: arrow 1.5s 0.2s infinite linear;
+            transition: text-decoration 0.5s ease;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

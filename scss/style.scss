@@ -1,0 +1,809 @@
+@import "reset.scss";
+@import "varMix.scss";
+@import "container.scss";
+@import "about.scss";
+@import "how.scss";
+@import "feedback.scss";
+@import "download.scss";
+@import "footer.scss";
+
+@font-face {
+    font-family: "Objective";
+    src: url(../fonts/Objective-Bold.otf) format("otf"), url(../fonts/Objective-Bold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Objective";
+    src: url(../fonts/Objective-Regular.otf) format("otf"), url(../fonts/Objective-Regular.woff2) format("woff2");
+  }
+
+body{
+    font-family: Objective;
+    min-height: 100vh;
+}
+
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1200px) {
+    .container{
+        min-height: 725px;
+        &__header{
+            margin: 0 0 25px;
+        }
+        &__logo{
+            flex: 0 0 48%;
+        }
+        &__logo svg{
+             width:100px;
+            height:38px;
+        }
+        &__nav{
+            flex: 0 0 20%;
+        }
+        &__link{
+            @include fontStyle(400,15px,30px,$color_text);
+        }
+        &__text{
+            flex: 0 0 55%;
+        }
+        &__title{
+            @include fontStyle(600,40px,55px,$color_text);
+            padding: 0 30px 0 0;
+            margin: 0 0 15px;
+        }
+        &__text_p{
+            @include fontStyle(400,15px,30px,$color_text);
+            padding: 0 20px 0 0;
+             margin: 0 0 40px;
+        }
+        &__text_btn{
+            margin: 0 15px 0 0;
+            @include width-height(160px,50px);
+            padding: 10px 10px 10px 18px;
+        }
+        &__img{
+            flex: 0 0 35%;
+            min-height: 500px;
+            background-position: left 0 bottom 0,
+            left 95px  bottom 0;
+            background-size: 200px 400px,
+            220px 500px;
+        }
+    }
+    .about{
+        @include width-height(100%,1300px);
+        padding: 100px;
+        justify-content:flex-start;
+        background-position: right 0 top 0,
+        right 130px top 105px,
+        left 90px bottom 700px,
+        right 130px bottom 100px,
+        left 0 bottom 0;
+        background-size: 150px 159px,
+        104px 104px,
+        104px 104px,
+        104px 104px,
+        150px 159px,;
+        &__title{
+            @include fontStyle(600,30px,40px,$color_text);
+           max-width:300px;
+           margin: 40px 30px 0 0;
+        }
+        &__container-1{
+            margin: 0;
+            max-width: 300px;
+        }
+        &__container-2{
+            max-width: 300px;
+        }
+        &__item-1{
+            margin: 85px 0 0 0;
+        }
+        &__item-1 img,
+        &__item-3 img{
+            margin:0 auto 56px;
+        }
+        &__item-2{
+            margin: 0 0 105px;
+            position: relative;
+            & img{
+                position: relative;
+                top: -30px;
+            }
+        }
+    }
+    .item-about{
+       max-width: 300px;
+       min-height: 400px;
+       padding:30px;
+        &__title{
+            @include fontStyle(600,15px,25px,$color_black-bold);
+            margin:0 0 10px;  
+        }
+        &__text{
+            @include fontStyle(400,10px,20px,$color_text);
+            margin: 0 0 55px; 
+        }
+        &__link{
+            @include fontStyle(600,10px,25px,$color_blue);
+            margin: 0 10px 0 0 ;
+        }
+    }
+    .how{
+        background: rgba(74, 153, 211, 0.1);
+        @include width-height(100%,400px);
+        padding: 60px;
+        margin: 0 0 50px;
+        &__title{
+            @include fontStyle(700,20px,20px,$color_blue); 
+        }
+        &__item{
+            margin: 0 30px;
+        }
+    }
+    .item{
+        &__title{
+            @include fontStyle(600,14px,14px,$color_black-bold);
+            margin: 0 0 10px;
+        }
+        &__text{
+            @include fontStyle(400,14px,20px,$color_text);
+        }
+    }
+    .feedback{
+        @include width-height(100%,500px);
+        padding: 50px 0 0;
+        margin: 0 0 60px;
+        &__title{
+            @include fontStyle(800,22px,22x,$color_black-bold);
+        }
+        &__slider  .slick-prev,
+        &__slider  .slick-next{
+            @include width-height(80px,80px);
+        }
+        &__slider  .slick-next{
+            right: 150px;
+            bottom: -40px;
+        }
+        &__slider  .slick-prev{
+            right: 230px;
+            bottom: -40px;
+        }
+        &__photo{
+            @include width-height(675px,520px);
+            max-width: 550px;
+            max-height: 470px;
+            background-size: 550px 300px,
+            330px 500px;
+            background-position: bottom 0 left 0,
+            left 110px bottom 0;
+        }
+        &__review{
+           max-width: 350px;
+           min-width: 300px;;
+           & svg{
+                width: 40px;
+                height: 34px;
+            }
+        }
+        &__text{
+            @include fontStyle(400,11px,19px,$color_black-bold);
+            margin: 0 0 30px; 
+        }
+        &__name{
+            @include fontStyle(600,13px,13px,$color_black-bold);
+        }
+        &__img-dots{
+            max-width: 100px;
+            min-height: 100px;
+            background-position: right 0 bottom 0;
+            background-size: 100px 100px;
+        }
+    }
+    .download{
+        @include width-height(100%,600px);
+        background-position: right 0 bottom -50px,
+        left 0 bottom -45px;
+        background-size: 220px 168px,
+        220px 168px;
+        padding: 0 200px 80px 128px;
+        &__img{
+            flex: 0 0 50%;
+            min-height: 420px;
+            background-size: 120px 320px,
+            120px 320px;
+            align-self: center;
+            & img{
+                position: relative;
+                left: 20%;
+                bottom: -30px;
+                @include width-height(220px,230px);
+            }
+        }
+        &__description{
+            margin: 0 0 0 55px;
+            padding: 30px 0 0; 
+        }
+        &__title{
+            @include fontStyle(800,20px,20px,$color_black-bold); 
+            margin: 40px 0 10px;
+        }
+        &__text{
+            @include fontStyle(400,11px,21px,$color_black-bold);
+            margin: 0 0 45px; 
+        }
+        &__btn{
+            @include width-height(130px,50px);
+            margin: 0 10px 0 0;
+            & svg{
+                @include width-height(100px,30px);
+            }
+        }
+    }
+    .footer{
+        @include width-height(100%,250px);
+        &__logo svg{
+            @include width-height(90px,32px);
+        }
+        &__nav{
+            @include width-height(100%,220px);
+            padding: 50px 100px 20px;
+            display:flex;
+            justify-content: space-between;
+        }
+        &__title{
+            @include fontStyle(500,11px,11px,$color_white); 
+            margin: 0 0 30px;
+        }
+        &__link{
+            @include fontStyle(400,10px,10px,$color_white); 
+            margin: 0 0 13px;
+        }
+        &__email{
+            max-width: 500px;
+            min-height: 100px;
+            &_lable{
+                @include fontStyle(400,13px,23px,$color_white); 
+                max-width: 300px;
+            }
+            &_input{
+                max-width: 200px;
+                min-height: 40px; 
+                padding: 13px 5px;
+            }
+        }
+        &__btn{
+            @include fontStyle(700,11px,11px,$color_blue); 
+            @include width-height(85px,41px);  
+        }
+        &__bottom{
+            @include width-height(100%,50px);
+            padding: 15px 105px;
+            @include fontStyle(700,11px,11px,$color_white);
+        }
+        &__icon{
+            margin: 0 25px 0 0;
+        }  
+    
+    }
+}
+@media only screen
+and (min-width: 720px)
+and (max-width: 1023px) {
+   .container{
+        min-height: 500px;
+        padding: 50px;
+        &__logo{
+            display: none;
+        }
+        &__nav{
+            display:none;
+        }
+        &__burger-menu{
+            display: block;
+            flex: 0 0 100%;
+        }
+        &__discription{
+            justify-content: center;
+            align-self: center;
+        }
+        &__text{
+            flex: 0 0 90%;
+        }
+        &__title{
+            @include fontStyle(600,30px,45px,$color_text);
+            padding:0;
+            margin: 0 0 10px;
+        }
+        &__text_p{
+            @include fontStyle(400,10px,20px,$color_text);
+            margin: 0 0 20px;
+        }
+        &__text_btn{
+            margin: 0 10px 0 0;
+            @include width-height(120px,40px);
+            padding: 5px 5px 5px 5px;
+            & svg{
+                width: 100px;
+                height: 30px;
+            }
+        }
+        &__img{
+            display: none;
+        }
+    }
+   .about{
+    @include width-height(100%,1000px);
+    padding: 50px;
+    justify-content: center;
+    background-position: right 0 top 0,
+    right 80px top 50px,
+    left 150px top 300px,
+    right 50px bottom 50px,
+    left 0 bottom 0;
+    background-size: 100px 109px,
+    54px 54px,
+    54px 54px,
+    54px 54px,
+    100px 109px;
+    &__title{
+        @include fontStyle(600,20px,30px,$color_text);
+        max-width: 200px;
+        margin: 40px 0 0;
+    }
+    &__container-1{
+    min-width: 200px;
+    margin: 0 40px 0 0;
+    }
+    &__item-1{
+        margin:85px 0 0;
+    }
+    &__item-1 img,
+    &__item-3 img{
+        margin:0 auto 36px;
+        @include width-height(100px,32px);
+    }
+    &__item-2{
+        padding: 0;
+        margin: 0 0 65px;
+        & img{
+            top:-30px;
+            @include width-height(100px,32px);
+        }
+    }
+}
+    .item-about{
+        max-width: 300px;
+        min-height: 350px;
+        padding:20px;
+        &__title{
+            @include fontStyle(600,15px,25px,$color_black-bold);
+            margin:0 0 10px;  
+        }
+        &__text{
+            @include fontStyle(400,10px,20px,$color_text);
+            margin: 0 0 55px; 
+        }
+        &__link{
+            @include fontStyle(600,10px,25px,$color_blue);
+            margin: 0 10px 0 0 ;
+        }
+    }
+    .how{
+        @include width-height(100%,300px);
+        padding: 30px;
+        margin: 0 0 25px;
+        &__title{
+            @include fontStyle(700,16px,17px,$color_blue); 
+        }
+        &__item{
+           margin: 0 20px;
+        }
+    
+    }
+    .item{
+        &__title{
+            @include fontStyle(600,10px,10px,$color_black-bold);
+            margin: 0 0 10px;
+        }
+        &__text{
+            @include fontStyle(400,10px,15px,$color_text);
+        }
+        & svg{
+            @include width-height(30px,30px);
+        }
+    }
+    .feedback{
+        @include width-height(100%,300px);
+        padding: 50px 0 0;
+        margin: 0 0 30px;
+        &__title{
+            @include fontStyle(800,22px,22x,$color_black-bold);
+        }
+        &__slider .slick-track{
+            min-height: 300px;
+        }
+        &__slider .slick-prev,
+        &__slider  .slick-next{
+            @include width-height(60px,60px);
+        }
+        &__slider  .slick-next{
+            right: 150px;
+            bottom: -40px;
+            &:before {
+                transform: rotate(-45deg);
+                right: 20px;
+            }
+            &:after {
+                transform: rotate(45deg);
+                bottom: 36px;
+                right: 20px;
+            }
+        }  
+        &__slider  .slick-prev{
+            right: 210px;
+            bottom: -40px;
+            &:before {
+                transform: rotate(45deg);
+                left: 20px;
+            }
+            &:after {
+                transform: rotate(-45deg);
+                bottom: 36px;
+                left: 20px;
+            }
+        }
+        &__photo{
+           display: none;
+        }
+        &__review{
+            margin: 0 auto;
+            max-width: 350px;
+            min-width: 300px;
+           & svg{
+                width: 40px;
+                height: 34px;
+            }
+        }
+        &__text{
+            @include fontStyle(400,11px,19px,$color_black-bold);
+            margin: 0 0 30px; 
+        }
+        &__name{
+            @include fontStyle(600,13px,13px,$color_black-bold);
+        }
+        &__img-dots{
+            max-width: 100px;
+            min-height: 100px;
+            background-position: right 0 bottom 0;
+            background-size: 100px 100px;
+        }
+    }
+    .download{
+        @include width-height(100%,400px);
+        background-position: right 0 bottom -50px,
+        left 0 bottom -45px;
+        background-size: 120px 100px,
+        120px 100px;
+        padding: 0 100px 40px 64px;
+        &__img{
+           display: none;
+        }
+        &__description{
+            flex: 0 0 100%;
+            margin: 0 0 0 55px;
+            padding: 30px 0 0; 
+        }
+        &__title{
+            @include fontStyle(800,20px,20px,$color_black-bold); 
+            margin: 40px 0 10px;
+        }
+        &__text{
+            @include fontStyle(400,11px,21px,$color_black-bold);
+            margin: 0 0 45px; 
+        }
+        &__btn{
+            @include width-height(130px,50px);
+            margin: 0 10px 0 0;
+            & svg{
+                @include width-height(100px,30px);
+            }
+        }
+    }
+    .footer{
+        @include width-height(100%,400px);
+        &__logo svg{
+            @include width-height(60px,40px);
+        }
+        &__nav{
+            @include width-height(100%,400px);
+            padding: 25px 50px 10px;
+            flex-wrap: wrap;
+        }
+        &__title{
+            @include fontStyle(500,15px,15px,$color_white); 
+            margin: 0 0 30px;
+        }
+        &__link{
+            @include fontStyle(400,14px,14px,$color_white); 
+            margin: 0 0 13px;
+        }
+        &__email{
+            max-width: 500px;
+            min-height: 100px;
+            &_lable{
+                @include fontStyle(400,13px,23px,$color_white); 
+                max-width: 300px;
+            }
+            &_input{
+                max-width: 400px;
+                min-height: 40px; 
+                padding: 13px 5px;
+                &::placeholder{
+                    font-size: 10px;
+                }
+            }
+        }
+        &__btn{
+            @include fontStyle(700,11px,11px,$color_blue); 
+            @include width-height(85px,41px);  
+        }
+        &__bottom{
+            @include width-height(100%,50px);
+            padding: 15px 105px;
+            @include fontStyle(700,11px,11px,$color_white);
+        }
+        &__bottom{
+            @include width-height(100%,50px);
+            padding: 10px 50px;
+            @include fontStyle(700,11px,11px,$color_white);
+        }
+        &__icon{
+            margin: 0 25px 0 0;
+        }  
+    
+    }
+}
+@media only screen
+and (min-width: 320px)
+and (max-width: 719px) {
+    .container{
+        @include width-height(100%,500px);
+        margin: 0 0 40px;
+        &__header{
+        @include width-height(100%,40px);
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 20px 20px 0;
+        }
+        &__burger-menu{
+            display: block;
+        }
+        &__logo{
+            display: none;
+        }
+        &__nav{
+            display: none;
+        }
+        &__description{
+            justify-content: center;
+            padding: 15px;
+        }
+        &__text{
+            flex: 0 0 90%;
+        }
+        &__title{
+            @include fontStyle(600,30px,35px,$color_text);
+            padding: 0;
+            margin: 0 0 25px;
+        }
+        &__text_p{
+            @include fontStyle(400,20px,30px,$color_text);
+            padding: 0 32px 0 0;
+            margin: 0 0 40px;
+        }
+        &__text_btn{
+        @include width-height(150px,40px);
+        padding: 5px;
+             margin: 0 5px 0 0;
+                 &:hover{
+                    opacity: 0.6;
+                } 
+            }
+        &__img{
+            display: none;
+        }       
+    }   
+    .about{
+        @include width-height(100%,1000px);
+        flex-direction: column;
+        align-items: center;
+        padding:15px;
+        background-image: none;
+        &__title{
+            @include fontStyle(600,30px,30px,$color_text);
+            max-width: 200px;
+            margin: 0 0 30px;
+        }
+        &__container-1{
+            margin: 0 auto 40px;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+        }
+        &__container-2{
+            align-items: center;
+          
+        }
+        &__item-1{
+            margin: 0;
+        }
+        
+        &__item-2{
+            margin: 0 0 40px;
+        }
+    }
+    .how{
+        @include width-height(100%,400px);
+        padding: 15px;
+        margin: 0 0 35px;
+        &__items{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__title{
+            @include fontStyle(700,23px,23px,$color_blue); 
+        }
+        &__item{
+            margin: 25px;
+        }
+    }
+    .feedback{
+        @include width-height(100%,300px);
+        padding: 25px;
+        margin: 0 0 30px;
+        &__title{
+            @include fontStyle(800,22px,22x,$color_black-bold);
+        }
+        &__slider .slick-track{
+            min-height: 200px;
+        }
+        &__slider .slick-prev,
+        &__slider  .slick-next{
+            @include width-height(60px,60px);
+        }
+        &__slider  .slick-next{
+            right: 50px;
+            &:before {
+                transform: rotate(-45deg);
+                right: 20px;
+            }
+            &:after {
+                transform: rotate(45deg);
+                bottom: 36px;
+                right: 20px;
+            }
+        }  
+        &__slider  .slick-prev{
+            right: 110px;
+            &:before {
+                transform: rotate(45deg);
+                left: 20px;
+            }
+            &:after {
+                transform: rotate(-45deg);
+                bottom: 36px;
+                left: 20px;
+            }
+        }
+        &__photo{
+            display: none;
+        }
+        &__text{
+            @include fontStyle(400,14px,19px,$color_black-bold);
+            margin: 0 0 30px; 
+        }
+        &__name{
+            @include fontStyle(600,13px,13px,$color_black-bold);
+        }
+        &__img-dots{
+            display: none;
+        }
+    }
+    .download{
+        @include width-height(100%,300px);
+        padding: 20px;
+        background: none;
+        &__img{
+           display: none;
+        }
+        &__description{
+            flex: 0 0 100%;
+            margin: 0 0 35px;
+            padding: 20px; 
+        }
+        &__title{
+            @include fontStyle(800,20px,20px,$color_black-bold); 
+            margin: 40px 0 10px;
+        }
+        &__text{
+            @include fontStyle(400,11px,21px,$color_black-bold);
+            margin: 0 0 45px; 
+        }
+        &__btn{
+            @include width-height(110px,50px);
+            margin: 0 5px 0 0;
+            & svg{
+                @include width-height(100px,30px);
+            }
+        }
+    }
+    .footer{
+        @include width-height(100%,350px);
+        &__nav{
+            @include width-height(100%,600px);
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        &__title{
+            margin: 0 0 15px;
+            display: inline-block;
+        }
+        &__link{
+            text-decoration: none;
+            display: block;
+            margin: 0 0 18px;
+        }
+        &__email{
+            @include width-height(300px,120px);
+            &_lable{
+                @include fontStyle(400,18px,26px,$color_white); 
+                @include width-height(300px,52px); 
+                display: block;
+            }
+            &_input{
+                @include width-height(180px,50px); 
+                padding: 18px 10px;
+                border-radius: 5px;
+                border: none;
+                margin: 20px 10px 0 0;
+            }
+        }
+        &__btn{
+            @include width-height(100px,51px);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        &__bottom{
+            @include width-height(100%,60px);
+            display:flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 10px;
+        }
+        &__icon{
+            margin: 0 25px 0 0;
+            text-decoration: none;
+            display: inline-block;
+            &:hover{
+                transform: scale(1.4);
+                transform: scale(1.4);
+                transform: scale(1.4);
+            }
+        }  
+    
+    }
+
+}
+@keyframes arrow{
+    0%{transform: translateX(0); }
+    50%{
+     transform: translateX(8px);
+    }
+     100%{
+        transform: translateX(0);
+     }
+  }
+

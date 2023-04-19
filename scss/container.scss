@@ -1,0 +1,95 @@
+.container{
+    @include width-height(100%,768px);
+    background: linear-gradient(rgba(74,153,211,0.2) 0%, rgba(255,255,255,0.2) 100%);
+    box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.1);
+    &__header{
+        @include width-height(100%,80px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 50px;
+    }
+    &__burger-menu{
+        display: none;
+        @include width-height(50px,40px);
+        background:none;
+        border: none; 
+    }
+    &__burger-menu_1,
+    &__burger-menu_2,
+    &__burger-menu_3{
+        @include width-height(40px,5px);
+        background-color: $color_white;
+        margin: 0 0 5px;
+        transition: transform 0.5s ease;
+    }
+    &__burger-menu_2:hover{
+        transform: translate(10px);
+    }
+    &__logo{
+        display: block;
+        text-decoration: none;
+        flex: 0 0 42%;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 25%;
+    }
+    &__link{
+        display: block;
+        text-decoration: none;
+        padding: 5px;
+        @include fontStyle(400,20px,36px,$color_text);
+        transition: color 0.5s ease;
+        &:hover{
+            color: $color_blue;
+        }
+    }
+    &__description{
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+       padding: 0 85px 75px;
+    }
+    &__text{
+       flex: 0 0 53%;
+   }
+    &__title{
+        @include fontStyle(600,50px,70px,$color_text);
+        padding: 0 20px 0 0;
+        margin: 0 0 15px;
+    }
+    &__text_p{
+        @include fontStyle(400,20px,36px,$color_text);
+        padding: 0 32px 0 0;
+        margin: 0 0 60px;
+    }
+    &__text_btn{
+        margin: 0 20px 0 0;
+        transition: opacity 0.5s ease;
+        &:hover{
+            opacity: 0.6;
+        } 
+    }
+    &__img{
+        flex: 0 0 35%;
+        min-height: 535px;
+        background-image: url("../img/img01.png"),
+	    url("../img/img02.png");
+        background-repeat: no-repeat, 
+	    no-repeat;
+        background-position: left 0 bottom 0,
+        left 160px  bottom 0;
+        background-size: 240px 448px,
+        280px 534px;
+    }
+}
+.btn-blue{
+    @include width-height(180px,60px);
+    background-color: $color_blue;
+    border-radius: 5px;
+    border: none;
+    padding: 14px 14px 14px 22px;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+$color_blue: #4A99D3;
+$color_text:#260041;
+$color_black-bold: #0F001A;
+$color_white:#fff;
+
+@mixin width-height ($w,$h){
+    width: $w;
+    min-height: $h;
+}
+@mixin fontStyle($w,$s,$l,$c) {
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+    color:$c;
+
+}

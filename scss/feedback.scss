@@ -1,0 +1,105 @@
+.feedback{
+    @include width-height(100%,700px);
+    padding: 75px 0 0;
+    margin: 0 0 80px;
+    &__title{
+        @include fontStyle(800,26px,27px,$color_black-bold);
+        text-align: center;
+        margin: 0 auto 10px;
+    }
+    &__slider .slick-prev,
+    &__slider .slick-next{
+        @include width-height(80px,80px);
+        font-size: 0;
+        background:none;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+        border: none;
+        position: absolute;
+        transition:background-color 0.5s ease;
+        &:hover{
+            background-color: $color_blue;
+        }
+        &:hover:after,
+        &:hover:before{
+            background-color: $color_white;  
+        }
+       }
+    &__slider .slick-next{
+        right: 245px;
+        bottom: -40px;
+        &:before {
+            transform: rotate(-45deg);
+            right: 30px;
+        }
+        &:after {
+            transform: rotate(45deg);
+            bottom: 46px;
+            right: 30px;
+        }
+    }
+    &__slider .slick-prev{
+        right: 325px;
+        bottom: -40px;
+        &:before {
+            transform: rotate(45deg);
+            left: 30px;
+        }
+        &:after {
+            transform: rotate(-4545deg);
+            bottom: 46px;
+            left: 30px;
+        }
+    }
+    &__slider .slick-prev:before,
+    &__slider .slick-prev:after,
+    &__slider .slick-next:before,
+    &__slider .slick-next:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 5px;
+        background-color: $color_blue;
+    }
+    &__photo{
+       @include width-height(675px,520px);
+        background-image: url("../img/img04.png"),
+	    url("../img/img08.png");
+        background-repeat: no-repeat, 
+	    no-repeat;
+        background-position: left 0 bottom 0,
+        left 180px bottom 0;
+        background-size: 675px 400px,
+        auto auto;
+    }
+    &__slide-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__review{
+       @include width-height(420px,400px);
+       max-width: 420px;
+       min-height: 400px;
+       align-self: flex-end;
+       & svg{
+        margin: 60px 0 40px; 
+        opacity: 50%;
+       }
+    }
+    &__text{
+        @include fontStyle(400,16px,24px,$color_black-bold);
+        padding: 5px;
+        margin: 0 0 40px; 
+        opacity: 50%;
+    }
+    &__name{
+        @include fontStyle(600,18px,18px,$color_black-bold);
+    }
+    &__img-dots{
+       @include width-height(153px,153px);
+        background-image: url("../img/img06.png");
+        background-repeat: no-repeat;
+        background-position: right 0 bottom 0;
+        background-size: auto auto;
+    }
+}
